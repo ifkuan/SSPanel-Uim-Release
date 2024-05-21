@@ -151,9 +151,11 @@ getCer() {
 		&& cd /root/.acme.sh
 	fi
 
+ 
+			# && ./acme.sh --issue --standalone -d ${DOMAIN} --debug 2
+
 	./acme.sh --register-account  --server letsencrypt -m ${EMAIL} \
 	&& ./acme.sh --issue --standalone --server letsencrypt -d ${DOMAIN} --debug 2 \
-	# && ./acme.sh --issue --standalone -d ${DOMAIN} --debug 2
 	&& ln -s /root/.acme.sh/${DOMAIN}_ecc ${NGINX_SSL_PATH} \
 	&& sed -i "s/example.com/${DOMAIN}/g" ${CUR_DIR}/docker/443.conf \
 	&& cp ${CUR_DIR}/docker/443.conf ${NGINX_CONF_PATH}/sspanel.conf
