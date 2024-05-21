@@ -9,6 +9,10 @@
 
 ## 第一步
 	git clone --depth=1 https://github.com/ifkuan/SSPanel-Uim-Release.git
+ 
+
+ git clone https://github.com/ifkuan/SSPanel-Uim-Release.git && cd SSPanel-Uim-Release && chmod +x install.sh && ./install.sh
+ 
 
 ## 第二步
 	cd SSPanel-Uim-Release
