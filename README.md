@@ -8,14 +8,6 @@
 ## 使用
 
 ## 第一步
-	git clone --depth=1 https://github.com/ifkuan/SSPanel-Uim-Release.git
- 
-
- git clone https://github.com/ifkuan/SSPanel-Uim-Release.git && cd SSPanel-Uim-Release && chmod +x install.sh && ./install.sh
- 
-
-## 第二步
-	cd SSPanel-Uim-Release
 	修改 docker/.env 文件
 
 安装SSPanel的源码仓库可以选择默认的，也可以使用Anankke/SSPanel-Uim的源码仓库，请修改 docker/.env中的"REPOURL"。
@@ -28,9 +20,8 @@ Mariadb默认是不支持外部访问，如果需要，请将docker/docker-compo
 	ports:
 	  - '${DB_PORT}:3306'
 
-## 第三步
-	chmod +x ./install.sh
-	./install.sh
+## 第二步
+wget -N --no-check-certificate https://github.com/ifkuan/SSPanel-Uim-Release/blob/master/install.sh && chmod +x install.sh && bash install.sh
 
 ## SSL证书
 使用 acmesh-official/acme.sh 获取证书
